@@ -1,6 +1,6 @@
 import sqlite3
 
-connection = sqlite3.connect("database.db")
+connection = sqlite3.connect("beauty_salon.db")
 cursor = connection.cursor()
 
 # Insert new employee
@@ -39,7 +39,7 @@ def select_employee():
         print(x)
 
 # Show menu
-def show_menu(connect):
+def show_menu(connection):
     print("Prikazi opcije")
     print("1. Unos podataka o zapoleniku")
     print("2. Izmjena podataka o zaposleniku")
