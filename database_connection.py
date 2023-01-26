@@ -1,7 +1,7 @@
 import sqlite3
 connection = sqlite3.connect("beauty_salon.db")
 cursor = connection.cursor()
-sql_command = """CREATE TABLE employee (
+sql_command = """CREATE TABLE IF NOT EXISTS employee (
 ID INTEGER PRIMARY KEY,
 JMBG INTEGER ,
 first_name VARCHAR(30),
@@ -14,7 +14,7 @@ connection.close()
 
 connection = sqlite3.connect("beauty_salon.db")
 cursor = connection.cursor()
-sql_command = """CREATE TABLE client (
+sql_command = """CREATE TABLE IF NOT EXISTS client (
 ID INTEGER PRIMARY KEY,
 JMBG INTEGER ,
 first_name VARCHAR(30),
