@@ -35,6 +35,16 @@ waxing VARCHAR(30))"""
 cursor.execute(sql_command)
 connection.close()
 
-
+connection = sqlite3.connect("beauty_salon.db")
+cursor = connection.cursor()
+sql_command = """CREATE TABLE IF NOT EXISTS price_list (
+ID INTEGER PRIMARY KEY,
+nail_extension VARCHAR(30) ,
+nail_correction VARCHAR(30),
+permanent_varnish VARCHAR(30),
+make_up VARCHAR(30),
+waxing VARCHAR(30))"""
+cursor.execute(sql_command)
+connection.close()
 
 
